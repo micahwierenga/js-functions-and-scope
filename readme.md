@@ -6,6 +6,12 @@ Adapted by: Zeb Girouard
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--Hook
+	- I'm going to start class with a potentially offensive statement: Computers are slaves.
+	- They do exactly what we want them to do...sometimes too exactly.  That's what functions are.
+	- Also, they only have access to the information we choose to give them.  That's where scopes come in.
+-->
+
 # Functions and Scope
 
 ## Why is this important?
@@ -362,7 +368,7 @@ wdi.whatsTheName();
 => "WDI"
 ```
 
-<!--[CFU] Fist-to-five how do we feel about variable scope?-->
+<!--[CFU] Catchphrase - partner up and pick function, scope, or variable-->
 
 ## Independent Practice
 
