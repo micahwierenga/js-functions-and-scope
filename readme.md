@@ -1,6 +1,7 @@
 <!--
 Creator: Ilias Tsangaris
 Market: SF
+Adapted by: Zeb Girouard
 -->
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
@@ -104,6 +105,8 @@ shout('world!', sayHello);
 // alert box that says "hello world!"
 ```
 
+<!--[CFU] Think-pair-share: What is the difference between an anonymous and named function?-->
+
 ## Compilation
 
 Before we talk about scope, there's a few things to understand before thinking about what scope actually means.
@@ -149,6 +152,8 @@ There are two basic phases to go through when going from code in a file to a pro
 - Compile Time - a phase when the source code is translated to another form. For example, when we run a JavaScript program we will compile JavaScript to an intermediate language/bytecode that the JavaScript Engine, most likely [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) (a virtual machine), will understand.
 
 - Runtime - a phase when the computer actually runs each statement in the program.  For example, this is when the computer runs the JavaScript program bytecode.
+
+<!-- [Visual] Show source code pre-compile and post-compile side-by-side -->
 
 #### Variable Scope
 
@@ -357,6 +362,8 @@ wdi.whatsTheName();
 => "WDI"
 ```
 
+<!--[CFU] Fist-to-five how do we feel about variable scope?-->
+
 ## Independent Practice
 
 Work through as many as these exercises as you can within the next 15 mins - use the [starter-code](starter-code) provided!
@@ -391,6 +398,12 @@ wordReverse("Now I know what a TV dinner feels like")
 wordReverse("Put Hans back on the line")
 # => "line the on back Hans Put"
 ```
+
+<!-- Closing
+	-Go through repl.it with var and let
+	-Ask students if they can predict result, then run code
+	-Summarize var binds to nearest function block, let to nearest enclosing block
+-->	
 
 ## Conclusion
 
