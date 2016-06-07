@@ -161,7 +161,7 @@ There are two basic phases to go through when going from code in a file to a pro
 
 - Runtime - a phase when the computer actually runs each statement in the program.  For example, this is when the computer runs the JavaScript program bytecode.
 
-<!-- [Visual] Show source code pre-compile and post-compile side-by-side -->
+<img src='images/source_to_binary.png' alt='missing' />
 
 #### Variable Scope
 
