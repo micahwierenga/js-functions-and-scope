@@ -24,13 +24,13 @@ Adapted by: Zeb Girouard
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-- Describe why functions are created
-- Use functions to break programs into smaller sub-programs
-- Describe how parameters relate to functions
-- Explain what scope is
-- Compare global and local scope
-- Describe the `this` keyword and how it is affected by scope
-- Discuss the difference between public and private scope
+- **Describe** why functions are created
+- **Use** functions to break programs into smaller sub-programs
+- **Describe** how parameters relate to functions
+- **Explain** what scope is
+- **Compare** global and local scope
+- **Describe** the `this` keyword and how it is affected by scope
+- **Discuss** the difference between public and private scope
 
 ## Where should we be now?
 <!-- call out the skills that are prerequisites -->
@@ -39,6 +39,8 @@ Adapted by: Zeb Girouard
 - Write basic JavaScript
 - Use a text editor
 - Use basic JavaScript types and declare variables
+
+<!-- CFU Fist-to-five on these three points -->
 
 ## Keep your code DRY using Functions
 
@@ -119,7 +121,7 @@ Before we talk about scope, there's a few things to understand before thinking a
 
 The code that you write *must* be translated into a form that the computer can understand.
 
-Source code is human readable, *we hope*. This source code may be translated into a set of 1's and 0's that a computer's CPU can understand. Yep, the CPU is a chip on the computer that does all the processing.  There is a reason it's called the Central Processing Unit, or CPU.
+Source code is human readable, *we hope*. This source code may be translated into a set of 1's and 0's that a computer's CPU can understand. Yep, the CPU is a chip on the computer that does all the processing.  That's the reason it's called the Central Processing Unit.
 
 `Source Code`  ==>  `1's and 0's`
 
@@ -146,7 +148,7 @@ So here's what happens:
 `hello_world.c`  ==>  `hello_world`
 
 #### Interpreted Languages
-Some languages do *not* require the programmer to explicitly run a compiler. **JavaScript**, **Ruby** are a couple of interpreted languages. Essentially they are pre-compilled collections of C routines.
+Some languages do *not* require the programmer to explicitly run a compiler. **JavaScript** and **Ruby** are a couple of interpreted languages. Essentially they are pre-compilled collections of C routines.
 
 There is still compilation being done, but it's done automatically.
 
