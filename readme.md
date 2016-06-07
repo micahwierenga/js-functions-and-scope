@@ -14,7 +14,7 @@ Adapted by: Zeb Girouard
 
 # Functions and Scope
 
-## Why is this important?
+## Why is this important? (5 min)
 <!-- framing the "why" in big-picture/real world examples -->
 *This workshop is important because:*
 
@@ -42,7 +42,7 @@ Adapted by: Zeb Girouard
 
 <!-- CFU Fist-to-five on these three points -->
 
-## Keep your code DRY using Functions
+## Keep your code DRY using Functions (30 min)
 
 A function is a statement or a group of statements that can be called anywhere in the program so that the statements inside the function do not need to be written over and over again.
 
@@ -161,8 +161,6 @@ There are two basic phases to go through when going from code in a file to a pro
 
 - Runtime - a phase when the computer actually runs each statement in the program.  For example, this is when the computer runs the JavaScript program bytecode.
 
-<img src='images/source_to_binary.png' alt='missing' />
-
 #### Variable Scope
 
 The variable scope describes where in a program a variable can be seen. In other words, where it can be used. We'll see more later, but you've seen that variables declared within a function cannot be seen or used in the Global Scope.
@@ -182,7 +180,9 @@ Here's a quick summary of what your computer does when you're looking to run you
 		c. Turn source code into bytecode
 	3. Execute bytecode
 
-## Building Scope
+<img src='images/source_to_binary.png' alt='missing' />
+
+## Building Scope (20 min)
 
 Scope is built during the Lexical Analysis part of the Compilation phase. When scope is built during this phase it's called **Lexical Scope**. This is very common in many programming languages.
 
@@ -271,7 +271,7 @@ Global scope can be really confusing when you run into namespace clashes. You wo
 
 #### Local Scope
 
-Local scope refers to any scope that is defined right past the global one. If you define a function, this function will have its own scope inside the body of the function. Any function defined inside another function has a also a local scope and can refer to the parent scope, but this logic doesn't work the other way around.
+Local scope refers to any scope that is defined right past the global one. If you define a function, this function will have its own scope inside the body of the function. Any function defined inside another function also has a local scope and can refer to the parent scope, but this logic doesn't work the other way around.
 
 #### Function scope - can't get inside!
 
@@ -372,7 +372,7 @@ wdi.whatsTheName();
 
 <!--[CFU] Catchphrase - partner up and pick function, scope, or variable-->
 
-## Independent Practice
+## Independent Practice (15 min)
 
 Work through as many as these exercises as you can within the next 15 mins - use the [starter-code](starter-code) provided!
 
@@ -413,7 +413,7 @@ wordReverse("Put Hans back on the line")
 	-Summarize var binds to nearest function block, let to nearest enclosing block
 -->	
 
-## Conclusion
+## Conclusion (5 min)
 
 The only way to master JavaScript scope is to practice. You'll have a lot of confusing errors with the JavaScript you write at the beginning of your journey into programming! This will force you to name variables and functions the right way to make sure there is no conflict.
 
