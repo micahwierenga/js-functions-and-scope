@@ -6,6 +6,8 @@ Adapted by: Zeb Girouard
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!-- 9:30 5 minutes -->
+
 <!--Hook
 	- I'm going to start class with a potentially offensive statement: Computers are slaves.
 	- They do exactly what we want them to do...sometimes too exactly.  That's what functions are.
@@ -14,11 +16,11 @@ Adapted by: Zeb Girouard
 
 # Functions and Scope
 
-## Why is this important? (5 min)
+## Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
 *This workshop is important because:*
 
-**Functions** endow JavaScript with behavior. This aspect of JavaScript is what allows us to **encapsulate** behavior and **abstract** away it's logic. **Scope** is a key concept to understanding how functions work.
+**Functions** endow JavaScript with behavior. This aspect of JavaScript is what allows us to **encapsulate** behavior and **abstract** away its logic. **Scope** is a key concept to understanding how functions work.
 
 ## What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
@@ -36,13 +38,15 @@ Adapted by: Zeb Girouard
 <!-- call out the skills that are prerequisites -->
 *Before this workshop, developers should already be able to:*
 
-- Write basic JavaScript
-- Use a text editor
-- Use basic JavaScript types and declare variables
+- **Write** basic JavaScript
+- **Use** a text editor
+- **Use** basic JavaScript types and declare variables
 
 <!-- CFU Fist-to-five on these three points -->
 
-## Keep your code DRY using Functions (30 min)
+<!--9:35 30 minutes -->
+
+## Keep your code DRY using Functions
 
 A function is a statement or a group of statements that can be called anywhere in the program so that the statements inside the function do not need to be written over and over again.
 
@@ -71,8 +75,8 @@ The difference is subtle but important. The first function declaration is assign
 No matter what syntax you use, a function always has:
 
 - A name
-- An optional list of arguments - or information to use - defined by the parenthesis before the opening curly brace
-- Statements inside the function - this is the code executed every the function is called
+- An optional list of parameters - or information to use - defined by the parenthesis before the opening curly brace
+- Statements inside the function - this is the code executed every time the function is called
 
 
 #### Calling Functions
@@ -81,7 +85,7 @@ Calling a function will execute the code defined inside this function.
 
 Defining and calling a function is different - a function will not be called when it's defined.
 
-You call a function by using parenthesis after the function's name `()`:
+You call a function by using parentheses after the function's name `()`:
 
 
 ```javascript
@@ -167,9 +171,9 @@ The variable scope describes where in a program a variable can be seen. In other
 
 #### Lexical Analysis
 
-This first part of the Compilation phase is [Lexical Analysis](https://en.wikipedia.org/wiki/Lexical_analysis). This step depends upon a [regular language](https://en.wikipedia.org/wiki/Regular_language) being used. It will scan through the source code, one character at a time, looking for matching [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), a predefined set of possible character sequences, with specific meaning. In JavaScript examples of regular expressions include: `for`, `function`, `if`, `var`, etc.
+The first part of the Compilation phase is [Lexical Analysis](https://en.wikipedia.org/wiki/Lexical_analysis). It will scan through the source code, one character at a time, looking for matching [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), a predefined set of possible character sequences, with specific meaning. In JavaScript examples of regular expressions include: `for`, `function`, `if`, `var`, etc.
 
-During this step that the compiler builds variable scopes and **declares** variables inside each scope.
+During this step the compiler builds variable scopes and **declares** variables inside each scope.
 
 Here's a quick summary of what your computer does when you're looking to run your JavaScript file:
 
@@ -182,7 +186,11 @@ Here's a quick summary of what your computer does when you're looking to run you
 
 <img src='images/source_to_binary.png' alt='missing' />
 
-## Building Scope (20 min)
+<!-- CFU: Think-pair-share, what is the process to turn your JavaScript code into 0s and 1s -->
+
+<!--10:05 20 minutes -->
+
+## Building Scope
 
 Scope is built during the Lexical Analysis part of the Compilation phase. When scope is built during this phase it's called **Lexical Scope**. This is very common in many programming languages.
 
@@ -214,7 +222,7 @@ displayPerson(firstName, lastName);
 removeYears(age, 10);
 ```
 
-Node will load this file and pass the source code on to it's Javascript VM.  Then, the VM will run do a Lexical Analysis of this source and build Variable Scope as described in the following steps:
+Node will load this file and pass the source code on to its Javascript VM.  Then, the VM will do a Lexical Analysis of this source and build Variable Scope as described in the following steps:
 
 1. Found `var firstName` variable declaration (using regular expression).  
 Declare firstName variable in Global Scope.  
@@ -229,30 +237,24 @@ Declare `displayPerson` in Global Scope.
 
 5. Found the `fname` and `lname` declarations.
 
-  > Note: Functions arguments behave just like local variables and are declared.
+  > Note: Function arguments behave just like local variables and are declared.
   - Declare arguments in the `displayPerson` function scope.  
 
-6. Found prefix, `fullName` variable declarations.  
+6. Found `prefix`, `fullName` variable declarations.  
 Declare them in the `displayPerson` function scope.  
 7. Found `getFullName` declaration.  
 Declare `getFullName` in the `displayPerson` function scope.
-
  - Notice that `getFullName` is a function, which creates an inner scope.
- - All done with `getFullName` function, no more variable declarations.
- - All done with `displayPerson` function, no more variable declarations.
-
-![Scope](https://i.imgur.com/Ex9a0qB.png)
-
-8. Found `removeYears` variable declaration.
+8. All done with `getFullName` function, no more variable declarations.
+9. All done with `displayPerson` function, no more variable declarations.
+ ![Scope](https://i.imgur.com/Ex9a0qB.png)
+10. Found `removeYears` variable declaration.
 Declare `removeYears` in Global scope.
  - `removeYears` is a function; an inner scope is created.
-
-9. Found age and `minusYears` variable declarations.  
+11. Found age and `minusYears` variable declarations.  
 Declare these in the function's scope.
 
 ![removeYears](https://i.imgur.com/cA6kaw5.png)
-
-
 
 ## The Terminology of Scope
 
@@ -271,11 +273,11 @@ Global scope can be really confusing when you run into namespace clashes. You wo
 
 #### Local Scope
 
-Local scope refers to any scope that is defined right past the global one. If you define a function, this function will have its own scope inside the body of the function. Any function defined inside another function also has a local scope and can refer to the parent scope, but this logic doesn't work the other way around.
+Local scope refers to any scope that is defined inside the global one. If you define a function, this function will have its own scope inside the body of the function. Any function defined inside another function also has a local scope and can refer to the parent scope, but this logic doesn't work the other way around.
 
 #### Function scope - can't get inside!
 
-A variable defined inside a function *cannot* be accessed outside the function, this is the scope function:
+A variable defined inside a function *cannot* be accessed outside the function. For instance:
 
 ```javascript
 var a = "this is the global scope";
@@ -286,7 +288,7 @@ myFunction();
 alert(b);
 ```
 
-This will throw a reference error because the variable `b` is not accessible outside of the scope if the function where it is defined.
+This will throw a reference error because the variable `b` is not accessible outside of the function where it is defined.
 
 #### Accessing variables in the same scope
 
@@ -372,18 +374,20 @@ wdi.whatsTheName();
 
 <!--[CFU] Catchphrase - partner up and pick function, scope, or variable-->
 
-## Independent Practice (15 min)
+<!--10:25 15 minutes -->
 
-Work through as many as these exercises as you can within the next 15 mins - use the [starter-code](starter-code) provided!
+## Independent Practice
+
+Work through as many of these exercises as you can within the next 15 minutes - use the [starter-code](starter-code) provided!
 
 1. Write a function `lengths` that accepts a single parameter as an argument, namely
 an array of strings. The function should return an array of numbers where each
 number is the length of the corresponding string.
 
-```javascript
-var words = ["hello", "what", "is", "up", "dude"]
-lengths(words)  # => [5, 4, 2, 2, 4]
-```
+	```javascript
+	var words = ["hello", "what", "is", "up", "dude"]
+	lengths(words)  # => [5, 4, 2, 2, 4]
+	```
 
 2. Write a Javascript function called `transmogrifier`. This function should accept three arguments, which you can assume will be numbers. Your function should return the "transmogrified" result.
 
@@ -391,21 +395,21 @@ The transmogrified result of three numbers is the product of the first two numbe
 
 For example, the transmogrified result of 5, 3, and 2 is `(5 times 3) to the power of 2` is 225. Use your function to find the following answers.
 
-```javascript
-transmogrifier(5, 4, 3)
-transmogrifier(13, 12, 5)
-transmogrifier(42, 13, 7)
+	```javascript
+	transmogrifier(5, 4, 3)
+	transmogrifier(13, 12, 5)
+	transmogrifier(42, 13, 7)
 
-```
+	```
 
 3.  Write a function `wordReverse` that accepts a single argument, a string. The method should return a string with the order of the words reversed. Don't worry about punctuation.
 
-```javascript
-wordReverse("Now I know what a TV dinner feels like")
-# => "like feels dinner TV a what know I Now"
-wordReverse("Put Hans back on the line")
-# => "line the on back Hans Put"
-```
+	```javascript
+	wordReverse("Now I know what a TV dinner feels like")
+	# => "like feels dinner TV a what know I Now"
+	wordReverse("Put Hans back on the line")
+	# => "line the on back Hans Put"
+	```
 
 <!-- Closing
 	-Go through repl.it with var and let
@@ -413,7 +417,9 @@ wordReverse("Put Hans back on the line")
 	-Summarize var binds to nearest function block, let to nearest enclosing block
 -->	
 
-## Conclusion (5 min)
+<!--10:40 5 minutes -->
+
+## Conclusion
 
 The only way to master JavaScript scope is to practice. You'll have a lot of confusing errors with the JavaScript you write at the beginning of your journey into programming! This will force you to name variables and functions the right way to make sure there is no conflict.
 
@@ -421,7 +427,7 @@ The only way to master JavaScript scope is to practice. You'll have a lot of con
 - Explain what happens before JavaScript code is executed.
 - Explain the difference between local and global scope.
 
-For more details about functions and scope [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions).
+For more details about functions and scope, click [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions).
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
