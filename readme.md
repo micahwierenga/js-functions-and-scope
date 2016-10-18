@@ -391,9 +391,9 @@ number is the length of the corresponding string.
 
 2. Write a Javascript function called `transmogrifier`. This function should accept three arguments, which you can assume will be numbers. Your function should return the "transmogrified" result.
 
-The transmogrified result of three numbers is the product of the first two numbers, raised to the power of the third number.
+	The transmogrified result of three numbers is the product of the first two numbers, raised to the power of the third number.
 
-For example, the transmogrified result of 5, 3, and 2 is `(5 times 3) to the power of 2` is 225. Use your function to find the following answers.
+	For example, the transmogrified result of 5, 3, and 2 is `(5 times 3) to the power of 2` is 225. Use your function to find the following answers.
 
 	```javascript
 	transmogrifier(5, 4, 3)
