@@ -6,7 +6,7 @@ Adapted by: Zeb Girouard
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!-- 9:30 5 minutes -->
+<!-- 9:40 5 minutes -->
 
 <!--Hook
 	- I'm going to start class with a potentially offensive statement: Computers are slaves.
@@ -44,7 +44,7 @@ Adapted by: Zeb Girouard
 
 <!-- CFU Fist-to-five on these three points -->
 
-<!--9:35 30 minutes -->
+<!--9:45 10 minutes -->
 
 ## Keep your code DRY using Functions
 
@@ -119,6 +119,8 @@ shout('world!', sayHello);
 
 <!--[CFU] Think-pair-share: What is the difference between an anonymous and named function?-->
 
+<!--9:55 20 minutes -->
+
 ## Compilation
 
 Before we talk about scope, there's a few things to understand before thinking about what scope actually means.
@@ -188,7 +190,7 @@ Here's a quick summary of what your computer does when you're looking to run you
 
 <!-- CFU: Think-pair-share, what is the process to turn your JavaScript code into 0s and 1s -->
 
-<!--10:05 20 minutes -->
+<!--10:15 20 minutes -->
 
 ## Building Scope
 
@@ -257,7 +259,6 @@ Declare these in the function's scope.
 ![removeYears](https://i.imgur.com/cA6kaw5.png)
 
 ## The Terminology of Scope
-
 
 There are different terminologies to talk about scope in Javascript. If you read about `(function|global|lexical|public/private)scope` or **closure** or **namespace**, all these keywords are referring to the **scope**, one way or another.
 
@@ -335,8 +336,6 @@ getScore();
 
 ## `this`
 
-
-
 A function's `this` keyword is always referring to the current **context**. It is a reserved word in the language.
 
 #### This in the Global context
@@ -374,7 +373,7 @@ wdi.whatsTheName();
 
 <!--[CFU] Catchphrase - partner up and pick function, scope, or variable-->
 
-<!--10:25 15 minutes -->
+<!--10:35 15 minutes -->
 
 ## Independent Practice
 
@@ -417,7 +416,7 @@ number is the length of the corresponding string.
 	-Summarize var binds to nearest function block, let to nearest enclosing block
 -->	
 
-<!--10:40 5 minutes -->
+<!--10:50 5 minutes -->
 
 ## Conclusion
 
