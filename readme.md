@@ -32,7 +32,6 @@ Adapted by: Zeb Girouard
 - **Explain** what scope is
 - **Compare** global and local scope
 - **Describe** the `this` keyword and how it is affected by scope
-- **Discuss** the difference between public and private scope
 
 ## Where should we be now?
 <!-- call out the skills that are prerequisites -->
