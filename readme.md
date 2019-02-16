@@ -198,20 +198,20 @@ var firstName = 'Benjamin'; // 1
 var lastName = 'Button'; // 2
 var age = 39; // 3
 
-function displayPerson(fname, lname) { //4, 5
+function displayPerson(fname, lname) { // 4(5)
   var prefix = 'Mr'; // 6
   var fullName; // 6
 
   function getFullName() { // 7
-    var suffix = "Jr";
+    var suffix = "Jr"; // 8
     fullName = prefix + " " + fname + " " + lname + " " + suffix;
-    return  fullName;
+    return fullName;
   };
 
   return getFullName();
 };
 
-function removeYears(age, minusYears) { // 8 & 9
+function removeYears(age, minusYears) { // 9(10)
   return age - minusYears;
 };
 
@@ -219,7 +219,7 @@ displayPerson(firstName, lastName);
 removeYears(age, 10);
 ```
 
-Node will load this file and pass the source code on to its Javascript VM.  Then, the VM will do a Lexical Analysis of this source and build Variable Scope as described in the following steps:
+Node will load this file and pass the source code on to its Javascript VM. Then, the VM will do a Lexical Analysis of this source and build Variable Scope as described in the following steps:
 
 1. Found `var firstName` variable declaration (using regular expression).  
 Declare firstName variable in Global Scope.  
@@ -227,14 +227,14 @@ Declare firstName variable in Global Scope.
 Declare lastName in Global Scope.  
 3. Found `var age` variable declaration.  
 Declare age in Global Scope.  
-4. Found `var displayPerson` declaration.  
+4. Found `function displayPerson` declaration.  
 Declare `displayPerson` in Global Scope.
 
   - Notice that `displayPerson`'s value is a function, which creates an inner scope.
 
 5. Found the `fname` and `lname` declarations.
 
-  > Note: Function arguments behave just like local variables and are declared.
+  > Note: Function parameters behave just like local variables and are declared.
   - Declare arguments in the `displayPerson` function scope.  
 
 6. Found `prefix`, `fullName` variable declarations.  
@@ -242,13 +242,15 @@ Declare them in the `displayPerson` function scope.
 7. Found `getFullName` declaration.  
 Declare `getFullName` in the `displayPerson` function scope.
  - Notice that `getFullName` is a function, which creates an inner scope.
-8. All done with `getFullName` function, no more variable declarations.
-9. All done with `displayPerson` function, no more variable declarations.
+8. Found `suffix` variable declaration.
+Declare it in the `getFullName` function scope.
+9. All done with `getFullName` function, no more variable declarations.
+10. All done with `displayPerson` function, no more variable declarations.
  ![Scope](https://i.imgur.com/Ex9a0qB.png)
-10. Found `removeYears` variable declaration.
+11. Found `removeYears` variable declaration.
 Declare `removeYears` in Global scope.
  - `removeYears` is a function; an inner scope is created.
-11. Found age and `minusYears` variable declarations.  
+12. Found `age` and `minusYears` variable declarations.  
 Declare these in the function's scope.
 
 ![removeYears](https://i.imgur.com/cA6kaw5.png)
