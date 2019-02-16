@@ -4,14 +4,12 @@ Market: SF
 Adapted by: Zeb Girouard
 -->
 
-![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
-
 <!-- 9:50 5 minutes -->
 
 <!--Hook
 	- I'm going to start class with a potentially offensive statement: Computers are slaves.
-	- They do exactly what we want them to do...sometimes too exactly.  That's what functions are.
-	- Also, they only have access to the information we choose to give them.  That's where scopes come in.
+	- They do exactly what we want them to do...sometimes too exactly. That's what functions are.
+	- Also, they only have access to the information we choose to give them. That's where scopes come in.
 -->
 
 # Functions and Scope
@@ -26,20 +24,20 @@ Adapted by: Zeb Girouard
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-- **Describe** why functions are created
-- **Use** functions to break programs into smaller sub-programs
-- **Describe** how parameters relate to functions
-- **Explain** what scope is
-- **Compare** global and local scope
-- **Describe** the `this` keyword and how it is affected by scope
+- **Describe** why functions are created.
+- **Use** functions to break programs into smaller sub-programs.
+- **Describe** how parameters relate to functions.
+- **Explain** what scope is.
+- **Compare** global and local scope.
+- **Describe** the `this` keyword and how it is affected by scope.
 
 ## Where should we be now?
 <!-- call out the skills that are prerequisites -->
 *Before this workshop, developers should already be able to:*
 
-- **Write** basic JavaScript
-- **Use** a text editor
-- **Use** basic JavaScript types and declare variables
+- **Write** basic JavaScript.
+- **Use** a text editor.
+- **Use** basic JavaScript types and declare variables.
 
 <!-- CFU Fist-to-five on these three points -->
 
@@ -55,7 +53,6 @@ Functions are essential to write JavaScript and keep the code [DRY](https://en.w
 
 
 ## Defining Functions and Calling Functions
-
 
 A function can be defined using two different syntaxes. For example, we can define a function `speak` that receives one argument in either of the following ways:
 
@@ -73,9 +70,9 @@ The difference is subtle but important. The first function declaration is assign
 
 No matter what syntax you use, a function always has:
 
-- A name
-- An optional list of parameters - or information to use - defined by the parenthesis before the opening curly brace
-- Statements inside the function - this is the code executed every time the function is called
+- A **name**.
+- An optional list of **parameters** - or information to use - defined by the parenthesis before the opening curly brace.
+- **Statements** inside the function - this is the code executed every time the function is called.
 
 
 #### Calling Functions
@@ -98,7 +95,6 @@ hello();
 ```
 
 #### First-order Functions
-
 
 A function can be passed as an argument to another function:
 
@@ -126,9 +122,9 @@ Before we talk about scope, there's a few things to understand before thinking a
 
 The code that you write *must* be translated into a form that the computer can understand.
 
-Source code is human readable, *we hope*. This source code may be translated into a set of 1's and 0's that a computer's CPU can understand. Yep, the CPU is a chip on the computer that does all the processing.  That's the reason it's called the Central Processing Unit.
+Source code is human readable, *we hope*. This source code may be translated into a set of 1s and 0s that a computer's CPU can understand.
 
-`Source Code`  ==>  `1's and 0's`
+`Source Code`  ==>  `1s and 0s`
 
 ...or, the source code may be translated into a another type of language, byte code, that can be understood by a Virtual Machine(VM).
 
@@ -142,13 +138,13 @@ For example, the **C** and **C++** languages are explicitly compiled. The progra
 
 `gcc -o hello_world -c hello_world.c`
 
-This is done to translate the C code in the hello_world.c file into an *executable* or *binary* file that contains the 1's and 0's understood by the CPU.
+This is done to translate the C code in the hello_world.c file into an *executable* or *binary* file that contains the 1s and 0s understood by the CPU.
 
 *gcc* is a **C** compiler.
 
 So here's what happens:
 
-`Source Code`  ==>  `1's and 0's`
+`Source Code`  ==>  `1s and 0s`
 
 `hello_world.c`  ==>  `hello_world`
 
@@ -164,7 +160,7 @@ There are two basic phases to go through when going from code in a file to a pro
 
 - Compile Time - a phase when the source code is translated to another form. For example, when we run a JavaScript program we will compile JavaScript to an intermediate language/bytecode that the JavaScript Engine, most likely [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) (a virtual machine), will understand.
 
-- Runtime - a phase when the computer actually runs each statement in the program.  For example, this is when the computer runs the JavaScript program bytecode.
+- Runtime - a phase when the computer actually runs each statement in the program. For example, this is when the computer runs the JavaScript program bytecode.
 
 #### Variable Scope
 
@@ -172,7 +168,7 @@ The variable scope describes where in a program a variable can be seen. In other
 
 #### Lexical Analysis
 
-The first part of the Compilation phase is [Lexical Analysis](https://en.wikipedia.org/wiki/Lexical_analysis). It will scan through the source code, one character at a time, looking for matching [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), a predefined set of possible character sequences, with specific meaning. In JavaScript examples of regular expressions include: `for`, `function`, `if`, `var`, etc.
+The first part of the Compilation phase is [Lexical Analysis](https://en.wikipedia.org/wiki/Lexical_analysis). It will scan through the source code one character at a time, looking for matching [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), a predefined set of possible character sequences, with specific meaning. In JavaScript, examples of regular expressions include: `for`, `function`, `if`, `var`, etc.
 
 During this step the compiler builds variable scopes and **declares** variables inside each scope.
 
