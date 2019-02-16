@@ -17,8 +17,9 @@
 // your code here
 
 /*
-  3. Write a function `wordReverse` that accepts a single argument, a string. The method should return a string with the order of the words (not letters) reversed. Don't worry
-  about punctuation. I.e. "hello world" should become "world hello".
+  3. Write a function `wordReverse` that accepts a single argument, a string. 
+  The method should return a string with the order of the words (not letters) reversed. 
+  Don't worry about punctuation (i.e., "hello world" should become "world hello").
 */
 
 // your code here
